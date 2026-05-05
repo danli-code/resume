@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>resume.json — Your Name</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- TITLEBAR -->
+<div class="titlebar">
+  <div class="titlebar-dots">
+    <div class="dot dot-red"></div>
+    <div class="dot dot-amber"></div>
+    <div class="dot dot-green"></div>
+  </div>
+  <div class="titlebar-title">resume.json — VS Code</div>
+</div>
+
+<div class="workspace">
+
+  <!-- ACTIVITY BAR -->
+  <div class="activity-bar">
+    <div class="activity-icon active" title="Explorer">&#9974;</div>
+    <div class="activity-icon" title="Search">&#128269;</div>
+    <div class="activity-icon" title="Source Control">&#10630;</div>
+    <div class="activity-icon" title="Extensions">&#9634;</div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="sidebar-header">Explorer</div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-header">
+        <span class="chevron open">&#9658;</span>
+        <span>&#128193; PORTFOLIO</span>
+      </div>
+      <div class="sidebar-item active">
+        <span class="file-icon">&#128196;</span> resume.json
+      </div>
+      <div class="sidebar-item">
+        <span class="file-icon">&#128196;</span> README.md
+      </div>
+      <div class="sidebar-section-header" style="padding-left:16px">
+        <span class="chevron open">&#9658;</span>
+        <span>&#128193; projects</span>
+      </div>
+      <div class="sidebar-item" style="padding-left:44px">
+        <span class="file-icon">&#128196;</span> project-1.md
+      </div>
+      <div class="sidebar-item" style="padding-left:44px">
+        <span class="file-icon">&#128196;</span> project-2.md
+      </div>
+    </div>
+  </div>
+
+  <!-- EDITOR WRAPPER -->
+  <div class="editor-wrapper">
+
+    <!-- TABBAR -->
+    <div class="tabbar">
+      <div class="tab active">
+        <span>&#128196;</span> resume.json <span class="tab-close">&#215;</span>
+      </div>
+      <div class="tab">
+        <span>&#128196;</span> README.md <span class="tab-close">&#215;</span>
+      </div>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      PORTFOLIO <span class="breadcrumb-sep">›</span>
+      <span>resume.json</span> <span class="breadcrumb-sep">›</span>
+      <span>experience</span>
+    </div>
+
+    <!-- EDITOR -->
+    <div class="editor" id="editor">
+
+      <!-- GUTTER -->
+      <div class="gutter" id="gutter"></div>
+
+      <!-- CODE -->
+      <div class="code" id="code">
+
+        <!-- ═══════════════════════════════════════════════════════
+             REPLACE THE CONTENT BELOW WITH YOUR OWN RESUME INFO
+             Keep the HTML structure/classes — just change the text
+             ═══════════════════════════════════════════════════════ -->
+
+        <div class="line cm">// ┌─────────────────────────────────────────────────────┐</div>
+        <div class="line cm">// │  resume.json  ·  Last modified: 2026-05-05           │</div>
+        <div class="line cm">// │  Author: Your Name Here                               │</div>
+        <div class="line cm">// └─────────────────────────────────────────────────────┘</div>
+        <div class="line plain"></div>
+        <div class="line"><span class="br0">{</span></div>
+
+        <!-- ── CONTACT ── -->
+        <div class="line cm">  // ── Contact ──────────────────────────────────────────</div>
+        <div class="line"><span class="plain">  </span><span class="key">"name"</span><span class="plain">: </span><span class="str">"Your Name"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">  </span><span class="key">"title"</span><span class="plain">: </span><span class="str">"Senior Software Engineer"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">  </span><span class="key">"email"</span><span class="plain">: </span><span class="str">"you@email.com"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">  </span><span class="key">"phone"</span><span class="plain">: </span><span class="str">"(555) 867-5309"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">  </span><span class="key">"location"</span><span class="plain">: </span><span class="str">"San Francisco, CA"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">  </span><span class="key">"linkedin"</span><span class="plain">: </span><span class="str">"linkedin.com/in/yourname"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">  </span><span class="key">"github"</span><span class="plain">: </span><span class="str">"github.com/yourhandle"</span><span class="plain">,</span></div>
+        <div class="line plain"></div>
+
+        <!-- ── SUMMARY ── -->
+        <div class="line cm">  // ── Summary ──────────────────────────────────────────</div>
+        <div class="line"><span class="plain">  </span><span class="key">"summary"</span><span class="plain">: </span><span class="str">"Passionate engineer with 8+ years building scalable"</span></div>
+        <div class="line"><span class="plain">            </span><span class="str">"web applications. Loves clean code &amp; great UX."</span><span class="plain">,</span></div>
+        <div class="line plain"></div>
+
+        <!-- ── SKILLS ── -->
+        <div class="line cm">  // ── Skills ───────────────────────────────────────────</div>
+        <div class="line"><span class="plain">  </span><span class="key">"skills"</span><span class="plain">: </span><span class="br0">{</span></div>
+        <div class="line"><span class="plain">    </span><span class="key">"languages"</span><span class="plain">: </span><span class="br1">[</span><span class="str">"TypeScript"</span><span class="plain">, </span><span class="str">"Python"</span><span class="plain">, </span><span class="str">"Go"</span><span class="plain">, </span><span class="str">"SQL"</span><span class="br1">]</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">    </span><span class="key">"frameworks"</span><span class="plain">: </span><span class="br1">[</span><span class="str">"React"</span><span class="plain">, </span><span class="str">"Next.js"</span><span class="plain">, </span><span class="str">"Node.js"</span><span class="plain">, </span><span class="str">"FastAPI"</span><span class="br1">]</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">    </span><span class="key">"tools"</span><span class="plain">: </span><span class="br1">[</span><span class="str">"Docker"</span><span class="plain">, </span><span class="str">"Kubernetes"</span><span class="plain">, </span><span class="str">"AWS"</span><span class="plain">, </span><span class="str">"Terraform"</span><span class="br1">]</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">    </span><span class="key">"databases"</span><span class="plain">: </span><span class="br1">[</span><span class="str">"PostgreSQL"</span><span class="plain">, </span><span class="str">"Redis"</span><span class="plain">, </span><span class="str">"MongoDB"</span><span class="br1">]</span></div>
+        <div class="line"><span class="plain">  </span><span class="br0">}</span><span class="plain">,</span></div>
+        <div class="line plain"></div>
+
+        <!-- ── EXPERIENCE ── -->
+        <div class="line cm">  // ── Experience ───────────────────────────────────────</div>
+        <div class="line"><span class="plain">  </span><span class="key">"experience"</span><span class="plain">: </span><span class="br0">[</span></div>
+
+        <!-- Job 1 -->
+        <div class="line"><span class="plain">    </span><span class="br1">{</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"company"</span><span class="plain">: </span><span class="str">"Acme Corp"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"role"</span><span class="plain">: </span><span class="str">"Senior Software Engineer"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"start"</span><span class="plain">: </span><span class="str">"2022-03"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"end"</span><span class="plain">: </span><span class="kw">null</span><span class="plain">,</span>  <span class="cm">// currently employed</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"yoe"</span><span class="plain">: </span><span class="num">3</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"highlights"</span><span class="plain">: </span><span class="br2">[</span></div>
+        <div class="line"><span class="plain">        </span><span class="str">"Led migration of monolith to microservices, cutting p99 latency by 40%"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">        </span><span class="str">"Mentored 4 junior engineers, grew team velocity by 25%"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">        </span><span class="str">"Shipped real-time collab feature used by 200k+ daily active users"</span></div>
+        <div class="line"><span class="plain">      </span><span class="br2">]</span></div>
+        <div class="line"><span class="plain">    </span><span class="br1">}</span><span class="plain">,</span></div>
+
+        <!-- Job 2 -->
+        <div class="line"><span class="plain">    </span><span class="br1">{</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"company"</span><span class="plain">: </span><span class="str">"StartupCo"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"role"</span><span class="plain">: </span><span class="str">"Full-Stack Engineer"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"start"</span><span class="plain">: </span><span class="str">"2019-06"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"end"</span><span class="plain">: </span><span class="str">"2022-02"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"yoe"</span><span class="plain">: </span><span class="num">2.7</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"highlights"</span><span class="plain">: </span><span class="br2">[</span></div>
+        <div class="line"><span class="plain">        </span><span class="str">"Built core dashboard from 0 → 1 using React and GraphQL"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">        </span><span class="str">"Reduced cloud costs by $18k/mo through infra optimization"</span></div>
+        <div class="line"><span class="plain">      </span><span class="br2">]</span></div>
+        <div class="line"><span class="plain">    </span><span class="br1">}</span></div>
+
+        <div class="line"><span class="plain">  </span><span class="br0">]</span><span class="plain">,</span></div>
+        <div class="line plain"></div>
+
+        <!-- ── EDUCATION ── -->
+        <div class="line cm">  // ── Education ────────────────────────────────────────</div>
+        <div class="line"><span class="plain">  </span><span class="key">"education"</span><span class="plain">: </span><span class="br0">[</span></div>
+        <div class="line"><span class="plain">    </span><span class="br1">{</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"institution"</span><span class="plain">: </span><span class="str">"University of California, Berkeley"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"degree"</span><span class="plain">: </span><span class="str">"B.S. Computer Science"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"graduated"</span><span class="plain">: </span><span class="num">2019</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"gpa"</span><span class="plain">: </span><span class="num">3.85</span></div>
+        <div class="line"><span class="plain">    </span><span class="br1">}</span></div>
+        <div class="line"><span class="plain">  </span><span class="br0">]</span><span class="plain">,</span></div>
+        <div class="line plain"></div>
+
+        <!-- ── PROJECTS ── -->
+        <div class="line cm">  // ── Projects ─────────────────────────────────────────</div>
+        <div class="line"><span class="plain">  </span><span class="key">"projects"</span><span class="plain">: </span><span class="br0">[</span></div>
+        <div class="line"><span class="plain">    </span><span class="br1">{</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"name"</span><span class="plain">: </span><span class="str">"OpenTrack"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"description"</span><span class="plain">: </span><span class="str">"Open-source habit tracker — 1.2k GitHub stars"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"stack"</span><span class="plain">: </span><span class="br2">[</span><span class="str">"Next.js"</span><span class="plain">, </span><span class="str">"Prisma"</span><span class="plain">, </span><span class="str">"PostgreSQL"</span><span class="br2">]</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"url"</span><span class="plain">: </span><span class="str">"github.com/yourhandle/opentrack"</span></div>
+        <div class="line"><span class="plain">    </span><span class="br1">}</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">    </span><span class="br1">{</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"name"</span><span class="plain">: </span><span class="str">"PixelSort CLI"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"description"</span><span class="plain">: </span><span class="str">"Command-line image glitch art generator in Go"</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"stack"</span><span class="plain">: </span><span class="br2">[</span><span class="str">"Go"</span><span class="br2">]</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">      </span><span class="key">"url"</span><span class="plain">: </span><span class="str">"github.com/yourhandle/pixelsort"</span></div>
+        <div class="line"><span class="plain">    </span><span class="br1">}</span></div>
+        <div class="line"><span class="plain">  </span><span class="br0">]</span><span class="plain">,</span></div>
+        <div class="line plain"></div>
+
+        <!-- ── FUN ── -->
+        <div class="line cm">  // ── Fun facts (optional — makes you memorable!) ──────</div>
+        <div class="line"><span class="plain">  </span><span class="key">"interests"</span><span class="plain">: </span><span class="br0">[</span><span class="str">"rock climbing"</span><span class="plain">, </span><span class="str">"espresso"</span><span class="plain">, </span><span class="str">"mechanical keyboards"</span><span class="br0">]</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">  </span><span class="key">"openToWork"</span><span class="plain">: </span><span class="kw">true</span><span class="plain">,</span></div>
+        <div class="line"><span class="plain">  </span><span class="key">"preferredRole"</span><span class="plain">: </span><span class="br0">[</span><span class="str">"Staff Engineer"</span><span class="plain">, </span><span class="str">"Engineering Manager"</span><span class="br0">]</span></div>
+        <div class="line plain"></div>
+        <div class="line"><span class="br0">}</span></div>
+        <div class="line plain"></div>
+        <div class="line cm">// EOF</div>
+        <div class="line plain"></div>
+        <div class="line plain"></div>
+
+      </div><!-- /code -->
+
+      <!-- MINIMAP -->
+      <div class="minimap">
+        <div class="minimap-viewport"></div>
+        <div class="minimap-content" id="minimap"></div>
+      </div>
+
+    </div><!-- /editor -->
+  </div><!-- /editor-wrapper -->
+</div><!-- /workspace -->
+
+<!-- STATUSBAR -->
+<div class="statusbar">
+  <span>&#9741; main</span>
+  <span>&#10003; 0 errors</span>
+  <div class="statusbar-right">
+    <span>JSON</span>
+    <span>UTF-8</span>
+    <span>Ln 1, Col 1</span>
+    <span>Spaces: 2</span>
+  </div>
+</div>
+
+<script>
+  const code = document.getElementById('code');
+  const gutter = document.getElementById('gutter');
+  const minimap = document.getElementById('minimap');
+  const lines = code.querySelectorAll('.line');
+  const lineH = Math.round(14 * 1.6);
+
+  lines.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.textContent = i + 1;
+    gutter.appendChild(d);
+
+    const m = document.createElement('div');
+    m.className = 'minimap-line';
+    const r = Math.random();
+    m.style.width = (30 + r * 50) + '%';
+    m.style.background = r > 0.7 ? '#569cd6' : r > 0.4 ? '#ce9178' : '#6a9955';
+    minimap.appendChild(m);
+  });
+
+  const editor = document.getElementById('editor');
+  editor.addEventListener('scroll', () => {
+    const pct = editor.scrollTop / (editor.scrollHeight - editor.clientHeight);
+    const vp = document.querySelector('.minimap-viewport');
+    const maxTop = minimap.scrollHeight - 120;
+    vp.style.top = (8 + pct * maxTop) + 'px';
+  });
+
+  document.querySelectorAll('.sidebar-item').forEach(el => {
+    el.addEventListener('click', () => {
+      document.querySelectorAll('.sidebar-item').forEach(e => e.classList.remove('active'));
+      el.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
