@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>resume.json — Your Name</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
@@ -23,10 +23,14 @@
 
   <!-- ACTIVITY BAR -->
   <div class="activity-bar">
-    <div class="activity-icon active" title="Explorer">&#9974;</div>
-    <div class="activity-icon" title="Search">&#128269;</div>
-    <div class="activity-icon" title="Source Control">&#10630;</div>
-    <div class="activity-icon" title="Extensions">&#9634;</div>
+    <div class="activity-icon" onclick="window.print()" title="Print / Save as PDF">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+      <div class="tooltip">Print / Save as PDF</div>
+    </div>
   </div>
 
   <!-- SIDEBAR -->
@@ -229,7 +233,6 @@
   const gutter = document.getElementById('gutter');
   const minimap = document.getElementById('minimap');
   const lines = code.querySelectorAll('.line');
-  const lineH = Math.round(14 * 1.6);
 
   lines.forEach((_, i) => {
     const d = document.createElement('div');
