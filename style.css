@@ -323,3 +323,248 @@ html, body { height: 100%; background: var(--vsc-bg); color: var(--vsc-text); }
   .activity-bar { display: none; }
   .minimap { display: none; }
 }
+
+/* ════════════════════════════════════════════════════════════════
+   PROSE MODE — traditional resume layout, light/paper background,
+   IDE-style accent colors only on numbers and tech keywords.
+   Activated when <body> has class "prose-mode".
+   ════════════════════════════════════════════════════════════════ */
+
+body.prose-mode {
+  /* Override the dark VS Code variables with a light, paper palette.
+     The tokens (.kw, .num, .cm) inherit from these so existing rules
+     pick up the new colors automatically. */
+  --vsc-bg:       #f5f3ee;
+  --vsc-text:     #1a1a1a;
+  --vsc-comment:  #4a7c3f;
+  --vsc-string:   #a0522d;
+  --vsc-number:   #2a6e2a;
+  --vsc-keyword:  #1565c0;
+  --vsc-key:      #0277bd;
+  --vsc-bracket:  #b8860b;
+  --vsc-bracket2: #6f3a72;
+  --vsc-bracket3: #0d6efd;
+  --vsc-fn:       #795e26;
+
+  background: var(--vsc-bg);
+  color: var(--vsc-text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  min-height: 100vh;
+  height: auto;
+  padding: 32px 16px 64px;
+}
+
+/* Floating print button in the corner */
+.print-fab {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: #555;
+  border: 1px solid #d8d4c8;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: color 0.12s, border-color 0.12s, transform 0.12s;
+  z-index: 50;
+}
+.print-fab:hover {
+  color: var(--vsc-keyword);
+  border-color: var(--vsc-keyword);
+  transform: translateY(-1px);
+}
+
+/* Page (paper card) */
+body.prose-mode .page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 64px 72px;
+  background: #ffffff;
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ece7da;
+  border-radius: 2px;
+}
+
+/* Header (name + contact) */
+.r-head {
+  text-align: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #ebe7da;
+  margin-bottom: 26px;
+}
+.r-name {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--vsc-keyword);
+  margin: 0;
+  line-height: 1.1;
+}
+.r-contact {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+}
+.r-contact a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted #b9b3a3;
+}
+.r-contact a:hover {
+  color: var(--vsc-keyword);
+  border-bottom-color: var(--vsc-keyword);
+}
+.r-contact .dot-sep { color: #c8c2b3; margin: 0 6px; }
+.r-meta {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Section heading */
+.r-section { margin-bottom: 26px; }
+.r-h2 {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--vsc-bracket2);
+  border-bottom: 1.5px solid var(--vsc-bracket2);
+  padding-bottom: 4px;
+  margin: 0 0 12px;
+}
+
+/* Skills as a key/value table */
+.skills {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 6px 18px;
+  margin: 0;
+}
+.skills dt {
+  font-weight: 600;
+  color: #444;
+  font-size: 13px;
+  padding-top: 1px;
+}
+.skills dd {
+  margin: 0;
+  font-size: 13.5px;
+  color: #2c2c2c;
+}
+
+/* Experience entry */
+.job { margin-bottom: 14px; }
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+.job-titlebox { display: flex; flex-direction: column; gap: 1px; }
+.job-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--vsc-fn);
+}
+.job-team {
+  font-size: 13px;
+  color: #555;
+  font-style: italic;
+}
+.job-when {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 12.5px;
+  color: var(--vsc-number);
+  white-space: nowrap;
+  font-weight: 500;
+}
+.job-when .num { color: inherit; font-size: inherit; }
+
+/* Bulleted highlights */
+.bullets {
+  margin: 6px 0 0;
+  padding-left: 22px;
+}
+.bullets li {
+  font-size: 13.5px;
+  margin-bottom: 5px;
+  line-height: 1.55;
+  color: #2c2c2c;
+}
+.bullets li::marker { color: #b8b3a4; }
+
+/* Education row */
+.edu {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 13.5px;
+}
+.edu-degree { font-weight: 600; color: var(--vsc-fn); }
+.edu-school { color: #555; }
+.edu-sep { color: #c8c2b3; }
+.edu-year {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  color: var(--vsc-number);
+  font-weight: 500;
+}
+
+/* IDE-style accent tokens — monospace + accent color, inline in prose */
+body.prose-mode .num,
+body.prose-mode .kw {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 0.92em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+body.prose-mode .num { color: var(--vsc-number); }
+body.prose-mode .kw  { color: var(--vsc-keyword); }
+body.prose-mode .cm  { color: var(--vsc-comment); font-style: italic; font-size: 0.95em; }
+
+/* Print: paper-friendly */
+@media print {
+  body.prose-mode {
+    background: white !important;
+    padding: 0 !important;
+    height: auto;
+  }
+  body.prose-mode .page {
+    margin: 0;
+    padding: 0.4in 0.55in 0.5in;
+    box-shadow: none;
+    border: none;
+    max-width: none;
+  }
+  .print-fab { display: none !important; }
+  .r-head { border-bottom-color: #d4d0c4; }
+  .r-h2 { color: #503a52; border-color: #503a52; }
+  body.prose-mode .num { color: #1f5a1f; }
+  body.prose-mode .kw  { color: #0e4f9e; }
+  .r-contact a { border-bottom-color: transparent; }
+  @page { margin: 0.5in; size: letter; }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  body.prose-mode { padding: 16px 8px 48px; }
+  body.prose-mode .page {
+    padding: 32px 22px 48px;
+    box-shadow: none;
+    border: none;
+  }
+  .r-name { font-size: 28px; }
+  .skills { grid-template-columns: 88px 1fr; gap: 4px 12px; }
+  .job-head { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .edu { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .print-fab { top: 10px; right: 10px; }
+}
