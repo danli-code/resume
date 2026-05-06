@@ -574,7 +574,7 @@ body.prose-mode ::selection {
     height: auto;
   }
   body.prose-mode .page {
-    /* margin: 0; */
+    margin: 1.6cm;
     padding: 0.45in 0.6in 0.55in;
     background: #fff;
     box-shadow: none;
