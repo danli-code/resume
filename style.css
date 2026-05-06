@@ -576,7 +576,7 @@ body.prose-mode ::selection {
   }
   body.prose-mode .page {
     margin: 0;
-    padding: 5mm;
+    padding: 15mm 17mm 19mm;
     background: #fff;
     box-shadow: none;
     border: none;
