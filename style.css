@@ -451,9 +451,9 @@ body.prose-mode .page {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--vsc-bracket2);
-  border-bottom: 1px solid var(--vsc-edge);
+  /* border-bottom: 1px solid var(--vsc-edge); */
   padding-bottom: 6px;
-  margin: 0 0 14px;
+  /* margin: 0 0 14px; */
   font-style: italic;
 }
 .r-h2::before {
