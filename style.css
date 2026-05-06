@@ -454,6 +454,7 @@ body.prose-mode .page {
   border-bottom: 1px solid var(--vsc-edge);
   padding-bottom: 6px;
   margin: 0 0 14px;
+  font-style: italic;
 }
 .r-h2::before {
   content: '// ';
@@ -558,7 +559,7 @@ body.prose-mode .verb {
 body.prose-mode .num  { color: var(--vsc-number); }    /* orange */
 body.prose-mode .kw   { color: var(--vsc-string); }    /* green — overrides global blue rule */
 body.prose-mode .verb { color: var(--vsc-key); }       /* blue — action verbs */
-body.prose-mode .cm   { color: var(--vsc-comment); font-style: italic; font-size: 0.95em; font-family: inherit; white-space: normal; }
+body.prose-mode .cm   { color: var(--vsc-comment); font-style: italic; font-size: 0.95em; font-family: inherit; white-space: normal; letter-spacing:-1px; }
 
 /* Text selection — soft blue tint */
 body.prose-mode ::selection {
@@ -574,7 +575,7 @@ body.prose-mode ::selection {
     height: auto;
   }
   body.prose-mode .page {
-    margin: 1.6cm;
+    margin: 0;
     padding: 0.45in 0.6in 0.55in;
     background: #fff;
     box-shadow: none;
