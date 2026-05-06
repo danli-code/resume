@@ -10,7 +10,7 @@
   --vsc-line-hl:      #2a2d2e;
   --vsc-text:         #d4d4d4;
   --vsc-comment:      #6a9955;
-  --vsc-string:       #ce9178;
+  --vsc-string:       #0000FD;
   --vsc-number:       #75147C;
   --vsc-keyword:      #569cd6;
   --vsc-acronym:      #EC5528;
@@ -303,7 +303,7 @@ html, body { height: 100%; background: var(--vsc-bg); color: var(--vsc-text); }
     --vsc-bg: #ffffff;
     --vsc-text: #1a1a1a;
     --vsc-comment: #4a7c3f;
-    --vsc-string: #a0522d;
+    --vsc-string: #0000FD;
     --vsc-number: #2e7d32;
     --vsc-keyword: #1565c0;
     --vsc-acronym: #EC5528;
@@ -347,7 +347,7 @@ body.prose-mode {
   --vsc-text:     #1f2937;   /* dark slate body text (15.85:1 on white) */
   --vsc-muted:    #6b7280;   /* secondary text                          */
   --vsc-comment:  #6b7280;   /* comment color (4.83:1)                  */
-  --vsc-string:   #15803d;   /* technologies — emerald green (5.15:1)   */
+  --vsc-string:   #0000FD;   /* technologies — emerald green (5.15:1)   */
   --vsc-number:   #75147C;   /* numbers — deep purple (5.97:1)           */
   --vsc-keyword:  #86198f;   /* roles — deep fuchsia (7.79:1)           */
   --vsc-acronym:  #EC5528;   /* acronyms — vivid orange (5.88:1)         */
@@ -438,6 +438,9 @@ body.prose-mode .page {
   font-size: 13px;
   color: var(--vsc-muted);
   display: flex;
+  .acr {
+    margin: 0 2px;
+  }
 }
 
 /* Section heading — gold, code-comment style "// SECTION" feel */
