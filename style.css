@@ -325,31 +325,32 @@ html, body { height: 100%; background: var(--vsc-bg); color: var(--vsc-text); }
 }
 
 /* ════════════════════════════════════════════════════════════════
-   PROSE MODE (One Dark palette)
-   Document-style resume on a dark editor surface, with IDE accent
-   colors mapped to semantic resume categories:
-     numbers     → orange  (#d19a66)
-     verbs       → blue    (#61afef)
-     technologies→ green   (#98c379)
-     roles       → purple  (#c678dd)
-     orgs/heads  → gold    (#e5c07b)
-     comments    → muted   (#5c6370)
+   PROSE MODE (Light syntax palette — print-ready)
+   Document-style resume on a white page, with IDE accent colors
+   adapted from One Light / GitHub Light, darkened so every accent
+   passes WCAG AA on white (≥4.5:1 contrast):
+     numbers     → amber-700   (#b45309)
+     verbs       → blue-700    (#1d4ed8)
+     technologies→ green-700   (#15803d)
+     roles       → fuchsia-800 (#86198f)
+     orgs/heads  → yellow-700  (#a16207)
+     comments    → gray-500    (#6b7280)
    ════════════════════════════════════════════════════════════════ */
 
 body.prose-mode {
-  /* One Dark palette */
-  --vsc-bg:       #1a1d22;   /* outer (a touch darker than the page)  */
-  --vsc-surface:  #282c34;   /* page card surface (One Dark editor bg) */
-  --vsc-edge:     #3e4451;   /* subtle borders                         */
-  --vsc-text:     #abb2bf;   /* default body text                      */
-  --vsc-muted:    #828a99;   /* secondary text                         */
-  --vsc-comment:  #5c6370;   /* comment color                          */
-  --vsc-string:   #98c379;   /* green — technologies                   */
-  --vsc-number:   #d19a66;   /* orange — numbers, metrics              */
-  --vsc-keyword:  #c678dd;   /* purple — roles                         */
-  --vsc-key:      #61afef;   /* blue — verbs (function-name)           */
-  --vsc-bracket2: #e5c07b;   /* gold — section heads, org names        */
-  --vsc-fn:       #61afef;   /* (alias) blue                           */
+  /* Light syntax palette tuned for white pages and print */
+  --vsc-bg:       #f7f6f1;   /* outer warm off-white (screen only)     */
+  --vsc-surface:  #ffffff;   /* page card — pure white for print        */
+  --vsc-edge:     #e5e3dc;   /* subtle warm border                      */
+  --vsc-text:     #1f2937;   /* dark slate body text (15.85:1 on white) */
+  --vsc-muted:    #6b7280;   /* secondary text                          */
+  --vsc-comment:  #6b7280;   /* comment color (4.83:1)                  */
+  --vsc-string:   #15803d;   /* technologies — emerald green (5.15:1)   */
+  --vsc-number:   #b45309;   /* numbers — warm amber (4.91:1)           */
+  --vsc-keyword:  #86198f;   /* roles — deep fuchsia (7.79:1)           */
+  --vsc-key:      #1d4ed8;   /* verbs — vivid royal blue (7.41:1)       */
+  --vsc-bracket2: #a16207;   /* orgs / section heads — gold (4.66:1)    */
+  --vsc-fn:       #1d4ed8;   /* (alias) blue                            */
 
   background: var(--vsc-bg);
   color: var(--vsc-text);
@@ -373,7 +374,7 @@ body.prose-mode {
   border: 1px solid var(--vsc-edge);
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   transition: color 0.12s, border-color 0.12s, transform 0.12s, box-shadow 0.12s;
   z-index: 50;
 }
@@ -381,18 +382,18 @@ body.prose-mode {
   color: var(--vsc-key);
   border-color: var(--vsc-key);
   transform: translateY(-1px);
-  box-shadow: 0 2px 16px rgba(97,175,239,0.18);
+  box-shadow: 0 2px 14px rgba(29, 78, 216, 0.18);
 }
 
-/* Page card — feels like an editor pane */
+/* Page card — paper sheet on a warm off-white desk */
 body.prose-mode .page {
   max-width: 800px;
   margin: 0 auto;
   padding: 56px 64px 72px;
   background: var(--vsc-surface);
   border: 1px solid var(--vsc-edge);
-  border-radius: 4px;
-  box-shadow: 0 8px 36px rgba(0,0,0,0.45);
+  border-radius: 2px;
+  box-shadow: 0 6px 28px rgba(31, 41, 55, 0.08);
 }
 
 /* Header (name + contact) */
@@ -405,12 +406,11 @@ body.prose-mode .page {
 .r-name {
   font-size: 38px;
   font-weight: 700;
-  letter-spacing: -0.4px;
-  /* Name in gold — like a constant/identifier */
-  color: var(--vsc-bracket2);
+  letter-spacing: -0.5px;
+  /* Name in dark slate — bold and print-typical */
+  color: var(--vsc-text);
   margin: 0;
   line-height: 1.1;
-  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
 }
 .r-contact {
   margin-top: 12px;
@@ -551,29 +551,18 @@ body.prose-mode .kw   { color: var(--vsc-string); }    /* green — overrides gl
 body.prose-mode .verb { color: var(--vsc-key); }       /* blue — action verbs */
 body.prose-mode .cm   { color: var(--vsc-comment); font-style: italic; font-size: 0.95em; font-family: inherit; white-space: normal; }
 
-/* Subtle text selection in dark mode */
+/* Text selection — soft blue tint */
 body.prose-mode ::selection {
-  background: rgba(97, 175, 239, 0.25);
-  color: #fff;
+  background: rgba(29, 78, 216, 0.18);
+  color: inherit;
 }
 
-/* ── Print: switch to a paper-friendly version of the same palette ── */
+/* ── Print — paper-friendly (palette already AA on white) ── */
 @media print {
   body.prose-mode {
     background: #ffffff !important;
-    color: #1a1a1a;
     padding: 0 !important;
     height: auto;
-    /* desaturate slightly for paper readability */
-    --vsc-text:     #1a1a1a;
-    --vsc-muted:    #5b5b5b;
-    --vsc-edge:     #d6d6d6;
-    --vsc-comment:  #6a737d;
-    --vsc-string:   #2f7a3a;
-    --vsc-number:   #b16012;
-    --vsc-keyword:  #813ea0;
-    --vsc-key:      #0e4f9e;
-    --vsc-bracket2: #8a6a14;
   }
   body.prose-mode .page {
     margin: 0;
@@ -584,7 +573,6 @@ body.prose-mode ::selection {
     max-width: none;
   }
   .print-fab { display: none !important; }
-  .r-name { text-shadow: none; }
   .r-contact a { border-bottom-color: transparent; }
   @page { margin: 0.5in; size: letter; }
 }
