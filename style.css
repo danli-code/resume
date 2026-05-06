@@ -11,9 +11,9 @@
   --vsc-text:         #d4d4d4;
   --vsc-comment:      #6a9955;
   --vsc-string:       #ce9178;
-  --vsc-number:       #b5cea8;
+  --vsc-number:       #75147C;
   --vsc-keyword:      #569cd6;
-  --vsc-acronym:      red;
+  --vsc-acronym:      #EC5528;
   --vsc-key:          #9cdcfe;
   --vsc-bracket:      #ffd700;
   --vsc-bracket2:     #da70d6;
@@ -306,7 +306,7 @@ html, body { height: 100%; background: var(--vsc-bg); color: var(--vsc-text); }
     --vsc-string: #a0522d;
     --vsc-number: #2e7d32;
     --vsc-keyword: #1565c0;
-    --vsc-acronym: red;
+    --vsc-acronym: #EC5528;
     --vsc-key: #0277bd;
     --vsc-bracket: #b8860b;
     --vsc-bracket2: #8b4a8b;
@@ -348,9 +348,9 @@ body.prose-mode {
   --vsc-muted:    #6b7280;   /* secondary text                          */
   --vsc-comment:  #6b7280;   /* comment color (4.83:1)                  */
   --vsc-string:   #15803d;   /* technologies — emerald green (5.15:1)   */
-  --vsc-number:   #b45309;   /* numbers — warm amber (4.91:1)           */
+  --vsc-number:   #75147C;   /* numbers — deep purple (5.97:1)           */
   --vsc-keyword:  #86198f;   /* roles — deep fuchsia (7.79:1)           */
-  --vsc-acronym:  #ff0000;   /* acronyms — bright red (4.5:1)           */
+  --vsc-acronym:  #EC5528;   /* acronyms — vivid orange (5.88:1)         */
   --vsc-key:      #000085;   /* verbs — vivid royal blue (7.41:1)       */
   --vsc-bracket2: #a16207;   /* orgs / section heads — gold (4.66:1)    */
   --vsc-fn:       #1d4ed8;   /* (alias) blue                            */
@@ -437,6 +437,7 @@ body.prose-mode .page {
   margin-top: 6px;
   font-size: 13px;
   color: var(--vsc-muted);
+  display: flex;
 }
 
 /* Section heading — gold, code-comment style "// SECTION" feel */
