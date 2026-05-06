@@ -501,9 +501,8 @@ body.prose-mode .page {
 }
 .job-team {
   font-size: 13px;
-  font-style: italic;
-  /* Org / company / team → gold */
-  color: var(--vsc-bracket2);
+  /* font-style: italic; */
+  color: var(--vsc-muted);
   opacity: 0.92;
 }
 .job-when {
