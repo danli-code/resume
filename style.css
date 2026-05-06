@@ -1,5 +1,4 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
   --vsc-bg:           #1e1e1e;
   --vsc-sidebar:      #252526;
@@ -14,6 +13,7 @@
   --vsc-string:       #ce9178;
   --vsc-number:       #b5cea8;
   --vsc-keyword:      #569cd6;
+  --vsc-acronym:      red;
   --vsc-key:          #9cdcfe;
   --vsc-bracket:      #ffd700;
   --vsc-bracket2:     #da70d6;
@@ -220,6 +220,7 @@ html, body { height: 100%; background: var(--vsc-bg); color: var(--vsc-text); }
 
 /* ── SYNTAX COLORS ── */
 .kw   { color: var(--vsc-keyword); }
+.acr  { color: var(--vsc-acronym); }
 .str  { color: var(--vsc-string); }
 .num  { color: var(--vsc-number); }
 .cm   { color: var(--vsc-comment); font-style: italic; }
@@ -305,6 +306,7 @@ html, body { height: 100%; background: var(--vsc-bg); color: var(--vsc-text); }
     --vsc-string: #a0522d;
     --vsc-number: #2e7d32;
     --vsc-keyword: #1565c0;
+    --vsc-acronym: red;
     --vsc-key: #0277bd;
     --vsc-bracket: #b8860b;
     --vsc-bracket2: #8b4a8b;
@@ -348,7 +350,8 @@ body.prose-mode {
   --vsc-string:   #15803d;   /* technologies — emerald green (5.15:1)   */
   --vsc-number:   #b45309;   /* numbers — warm amber (4.91:1)           */
   --vsc-keyword:  #86198f;   /* roles — deep fuchsia (7.79:1)           */
-  --vsc-key:      #1d4ed8;   /* verbs — vivid royal blue (7.41:1)       */
+  --vsc-acronym:  #ff0000;   /* acronyms — bright red (4.5:1)           */
+  --vsc-key:      #000085;   /* verbs — vivid royal blue (7.41:1)       */
   --vsc-bracket2: #a16207;   /* orgs / section heads — gold (4.66:1)    */
   --vsc-fn:       #1d4ed8;   /* (alias) blue                            */
 
@@ -411,11 +414,13 @@ body.prose-mode .page {
   color: var(--vsc-text);
   margin: 0;
   line-height: 1.1;
+  display: flex;
 }
 .r-contact {
   margin-top: 12px;
   font-size: 13px;
   color: var(--vsc-muted);
+  display: flex;
 }
 .r-contact a {
   color: var(--vsc-text);
