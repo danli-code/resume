@@ -17,7 +17,7 @@
   --vsc-key:          #9cdcfe;
   --vsc-bracket:      #ffd700;
   --vsc-bracket2:     #da70d6;
-  --vsc-bracket3:     #179fff;
+  --vsc-bracket3:     #2F5390;
   --vsc-type:         #4ec9b0;
   --vsc-fn:           #dcdcaa;
   --vsc-sidebar-text: #cccccc;
@@ -537,9 +537,9 @@ body.prose-mode .page {
 }
 .edu-degree {
   font-weight: 600;
-  color: var(--vsc-keyword);
+  /* color: var(--vsc-keyword); */
 }
-.edu-school { color: var(--vsc-bracket2); }
+.edu-school { color: var(--vsc-bracket3); }
 .edu-sep { color: var(--vsc-comment); }
 .edu-year {
   font-family: 'JetBrains Mono', 'Consolas', monospace;
