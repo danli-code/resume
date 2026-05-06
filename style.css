@@ -222,8 +222,8 @@ html, body { height: 100%; background: var(--vsc-bg); color: var(--vsc-text); }
 .kw   { color: var(--vsc-keyword); }
 .acr  { color: var(--vsc-acronym); }
 .str  { color: var(--vsc-string); }
-.num  { color: var(--vsc-number); }
-.yr   { color: var(--vsc-muted); }
+.num  { color: var(--vsc-number); font-family: 'Menlo' !important; }
+.yr   { color: var(--vsc-muted); font-size: 12.5px; font-weight: 500; font-family: 'Menlo'; }
 .cm   { color: var(--vsc-comment); font-style: italic; }
 .key  { color: var(--vsc-key); }
 .type { color: var(--vsc-type); }
