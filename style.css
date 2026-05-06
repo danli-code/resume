@@ -14,7 +14,7 @@
   --vsc-number:       #75147C;
   --vsc-keyword:      #569cd6;
   --vsc-acronym:      #EC5528;
-  --vsc-key:          #9cdcfe;
+  --vsc-key:          #000085;
   --vsc-bracket:      #ffd700;
   --vsc-bracket2:     #da70d6;
   --vsc-bracket3:     #2F5390;
@@ -307,7 +307,7 @@ html, body { height: 100%; background: var(--vsc-bg); color: var(--vsc-text); }
     --vsc-number: #2e7d32;
     --vsc-keyword: #1565c0;
     --vsc-acronym: #EC5528;
-    --vsc-key: #0277bd;
+    --vsc-key: #000085;
     --vsc-bracket: #b8860b;
     --vsc-bracket2: #8b4a8b;
     --vsc-bracket3: #0d6efd;
@@ -496,7 +496,7 @@ body.prose-mode .page {
   font-size: 15px;
   font-weight: 600;
   /* Role / job title → purple (keyword) */
-  color: var(--vsc-keyword);
+  color: var(--vsc-key);
 }
 .job-team {
   font-size: 13px;
