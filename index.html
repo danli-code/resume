@@ -4,230 +4,93 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>resume.json — Dan Li</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Fira+Code:wght@300;400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body class="doc-mode">
 
-<!-- TITLEBAR -->
+<!-- TITLEBAR (kept slim for character) -->
 <div class="titlebar">
   <div class="titlebar-dots">
     <div class="dot dot-red"></div>
     <div class="dot dot-amber"></div>
     <div class="dot dot-green"></div>
   </div>
-  <div class="titlebar-title">resume.json — VS Code</div>
+  <div class="titlebar-title">resume.json — Dan Li</div>
+  <button class="print-btn" onclick="window.print()" title="Print / Save as PDF" aria-label="Print">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 6 2 18 2 18 9"/>
+      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+      <rect x="6" y="14" width="12" height="8"/>
+    </svg>
+    <span>Print</span>
+  </button>
 </div>
 
-<div class="workspace">
+<!-- DOC PAGE -->
+<main class="doc">
 
-  <!-- ACTIVITY BAR -->
-  <div class="activity-bar">
-    <div class="activity-icon" onclick="window.print()" title="Print / Save as PDF">
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 6 2 18 2 18 9"/>
-        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
-        <rect x="6" y="14" width="12" height="8"/>
-      </svg>
-      <div class="tooltip">Print / Save as PDF</div>
-    </div>
-  </div>
+  <!-- Document header -->
+  <header class="doc-header">
+    <h1 class="doc-name">Dan Li</h1>
+    <p class="doc-tagline">Senior Software Engineer · resume.json</p>
+  </header>
 
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <div class="sidebar-header">Explorer</div>
-    <div class="sidebar-section">
-      <div class="sidebar-section-header">
-        <span class="chevron open">&#9658;</span>
-        <span>&#128193; PORTFOLIO</span>
-      </div>
-      <div class="sidebar-item active">
-        <span class="file-icon">&#128196;</span> resume.json
-      </div>
-      <div class="sidebar-item">
-        <span class="file-icon">&#128196;</span> README.md
-      </div>
-      <div class="sidebar-section-header" style="padding-left:16px">
-        <span class="chevron open">&#9658;</span>
-        <span>&#128193; projects</span>
-      </div>
-      <div class="sidebar-item" style="padding-left:44px">
-        <span class="file-icon">&#128196;</span> project-1.md
-      </div>
-      <div class="sidebar-item" style="padding-left:44px">
-        <span class="file-icon">&#128196;</span> project-2.md
-      </div>
-    </div>
-  </div>
+  <!-- JSON content, doc-flow -->
+  <article class="code doc-code">
 
-  <!-- EDITOR WRAPPER -->
-  <div class="editor-wrapper">
+    <div class="line cm">// ─────────────────────────────────────────────────────</div>
+    <div class="line cm">// resume.json · Last modified: 2026-05-05 · Author: Dan Li</div>
+    <div class="line cm">// ─────────────────────────────────────────────────────</div>
+    <div class="line plain"></div>
+    <div class="line"><span class="br0">{</span></div>
 
-    <!-- TABBAR -->
-    <div class="tabbar">
-      <div class="tab active">
-        <span>&#128196;</span> resume.json <span class="tab-close">&#215;</span>
-      </div>
-      <div class="tab">
-        <span>&#128196;</span> README.md <span class="tab-close">&#215;</span>
-      </div>
-    </div>
+    <!-- ── CONTACT ── -->
+    <div class="line cm">  // Contact</div>
+    <div class="line"><span class="plain">  </span><span class="key">"name"</span><span class="plain">: </span><span class="str">"Dan Li"</span><span class="plain">,  </span><span class="key">"title"</span><span class="plain">: </span><span class="str">"Senior Software Engineer"</span><span class="plain">,</span></div>
+    <div class="line"><span class="plain">  </span><span class="key">"email"</span><span class="plain">: </span><span class="str">"danli.query@gmail.com"</span><span class="plain">,  </span><span class="key">"phone"</span><span class="plain">: </span><span class="str">"(858) 205-3999"</span><span class="plain">,</span></div>
+    <div class="line"><span class="plain">  </span><span class="key">"linkedin"</span><span class="plain">: </span><span class="str">"linkedin.com/in/li-dan"</span><span class="plain">,  </span><span class="key">"citizenship"</span><span class="plain">: </span><span class="str">"US Citizen"</span><span class="plain">,</span></div>
+    <div class="line"><span class="plain">  </span><span class="key">"clearances"</span><span class="plain">: </span><span class="br1">[</span><span class="str">"Government Community Cloud (GCC)"</span><span class="plain">, </span><span class="str">"National Security Cloud (NSC)"</span><span class="br1">]</span><span class="plain">,</span></div>
+    <div class="line plain"></div>
 
-    <!-- BREADCRUMB -->
-    <div class="breadcrumb">
-      PORTFOLIO <span class="breadcrumb-sep">›</span>
-      <span>resume.json</span> <span class="breadcrumb-sep">›</span>
-      <span>experience</span>
-    </div>
+    <!-- ── SKILLS ── -->
+    <div class="line cm">  // Skills</div>
+    <div class="line"><span class="plain">  </span><span class="key">"skills"</span><span class="plain">: </span><span class="br0">{</span></div>
+    <div class="line"><span class="plain">    </span><span class="key">"languages"</span><span class="plain">: </span><span class="br1">[</span><span class="str">"JavaScript (ES6+)"</span><span class="plain">, </span><span class="str">"jQuery"</span><span class="plain">, </span><span class="str">"React"</span><span class="plain">, </span><span class="str">"Node.js"</span><span class="plain">, </span><span class="str">"AngularJS"</span><span class="plain">, </span><span class="str">"SQL"</span><span class="plain">, </span><span class="str">"Python"</span><span class="br1">]</span><span class="plain">,</span></div>
+    <div class="line"><span class="plain">    </span><span class="key">"practices"</span><span class="plain">: </span><span class="br1">[</span><span class="str">"Agile"</span><span class="plain">, </span><span class="str">"Scrum"</span><span class="br1">]</span><span class="plain">,  </span><span class="key">"spoken"</span><span class="plain">: </span><span class="br1">[</span><span class="str">"English"</span><span class="plain">, </span><span class="str">"中文 (Mandarin)"</span><span class="plain">, </span><span class="str">"日本語 (learning)"</span><span class="br1">]</span></div>
+    <div class="line"><span class="plain">  </span><span class="br0">}</span><span class="plain">,</span></div>
+    <div class="line plain"></div>
 
-    <!-- EDITOR -->
-    <div class="editor" id="editor">
+    <!-- ── EXPERIENCE ── -->
+    <div class="line cm">  // Experience</div>
+    <div class="line"><span class="plain">  </span><span class="key">"experience"</span><span class="plain">: </span><span class="br0">[</span></div>
+    <div class="line"><span class="plain">    </span><span class="br1">{</span><span class="plain"> </span><span class="key">"team"</span><span class="plain">: </span><span class="str">"Monitoring Core &amp; Instance Observer"</span><span class="plain">, </span><span class="key">"role"</span><span class="plain">: </span><span class="str">"Senior Software Engineer"</span><span class="plain">, </span><span class="key">"start"</span><span class="plain">: </span><span class="num">2015</span><span class="plain">, </span><span class="key">"end"</span><span class="plain">: </span><span class="num">2025</span><span class="plain">, </span><span class="key">"yoe"</span><span class="plain">: </span><span class="num">10</span><span class="plain">,</span></div>
+    <div class="line"><span class="plain">      </span><span class="key">"highlights"</span><span class="plain">: </span><span class="br2">[</span></div>
+    <div class="line bullet"><span class="plain">        </span><span class="str">"Launched Instance Observer (IO), a customer-facing portal for instance metrics, historical analytics, alert configuration, and notifications — served 2,000+ accounts and generated $3M+ in revenue"</span><span class="plain">,</span></div>
+    <div class="line bullet"><span class="plain">        </span><span class="str">"Created 50+ data APIs with the BigData team, then built custom Highcharts visualizations tailored to customer needs"</span><span class="plain">,</span></div>
+    <div class="line bullet"><span class="plain">        </span><span class="str">"Built core notification features: SMS (Twilio), webhook integration, and in-app bell notifications"</span><span class="plain">,</span></div>
+    <div class="line bullet"><span class="plain">        </span><span class="str">"Debuted IO into the Regulated Markets (GCC and NSC), servicing 200+ accounts"</span><span class="plain">,</span></div>
+    <div class="line bullet"><span class="plain">        </span><span class="str">"Architected the IO deployment pipeline into Regulated Markets; coordinated across compliance, security, and platform teams to guarantee strict adherence to government guidelines"</span><span class="plain">,</span></div>
+    <div class="line bullet"><span class="plain">        </span><span class="str">"Led a team of 4 junior engineers across commercial and Regulated Market deployments"</span><span class="plain">,</span></div>
+    <div class="line bullet"><span class="plain">        </span><span class="str">"One of two engineers who co-developed the IO proof-of-concept; shaped the architecture and core features from the ground up; delivered in under 6 months"</span><span class="plain">,</span></div>
+    <div class="line bullet"><span class="plain">        </span><span class="str">"Designed an automated onboarding workflow for new alerts that standardized knowledge capture and coverage; enabled 200+ new alerts and still sees cross-team usage today"</span><span class="plain">,</span></div>
+    <div class="line bullet"><span class="plain">        </span><span class="str">"Reshaped the SRE alert dashboard with buckets and aggregation to improve categorization and reduce bloat during crises"</span><span class="plain">,</span></div>
+    <div class="line bullet"><span class="plain">        </span><span class="str">"Migrated the legacy SRE alerting system (data, tables, and workflows) to a newer framework with backwards compatibility and zero downtime"</span></div>
+    <div class="line"><span class="plain">      </span><span class="br2">]</span><span class="plain"> </span><span class="br1">}</span></div>
+    <div class="line"><span class="plain">  </span><span class="br0">]</span><span class="plain">,</span></div>
+    <div class="line plain"></div>
 
-      <!-- GUTTER -->
-      <div class="gutter" id="gutter"></div>
+    <!-- ── EDUCATION ── -->
+    <div class="line cm">  // Education</div>
+    <div class="line"><span class="plain">  </span><span class="key">"education"</span><span class="plain">: </span><span class="br0">[</span><span class="br1">{</span><span class="plain"> </span><span class="key">"institution"</span><span class="plain">: </span><span class="str">"University of California, Irvine"</span><span class="plain">, </span><span class="key">"degree"</span><span class="plain">: </span><span class="str">"B.S. Computer Science"</span><span class="plain">, </span><span class="key">"graduated"</span><span class="plain">: </span><span class="num">2016</span><span class="plain"> </span><span class="br1">}</span><span class="br0">]</span></div>
+    <div class="line plain"></div>
 
-      <!-- CODE -->
-      <div class="code" id="code">
+    <div class="line"><span class="br0">}</span></div>
+    <div class="line plain"></div>
+    <div class="line cm">// EOF</div>
 
-        <!-- ═══════════════════════════════════════════════════════
-             Dan Li — Resume (rendered as resume.json)
-             ═══════════════════════════════════════════════════════ -->
+  </article>
+</main>
 
-        <div class="line cm">// ┌─────────────────────────────────────────────────────┐</div>
-        <div class="line cm">// │  resume.json  ·  Last modified: 2026-05-05           │</div>
-        <div class="line cm">// │  Author: Dan Li                                       │</div>
-        <div class="line cm">// └─────────────────────────────────────────────────────┘</div>
-        <div class="line plain"></div>
-        <div class="line"><span class="br0">{</span></div>
-
-        <!-- ── CONTACT ── -->
-        <div class="line cm">  // ── Contact ──────────────────────────────────────────</div>
-        <div class="line"><span class="plain">  </span><span class="key">"name"</span><span class="plain">: </span><span class="str">"Dan Li"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">  </span><span class="key">"title"</span><span class="plain">: </span><span class="str">"Senior Software Engineer"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">  </span><span class="key">"email"</span><span class="plain">: </span><span class="str">"danli.query@gmail.com"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">  </span><span class="key">"phone"</span><span class="plain">: </span><span class="str">"(858) 205-3999"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">  </span><span class="key">"linkedin"</span><span class="plain">: </span><span class="str">"linkedin.com/in/li-dan"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">  </span><span class="key">"citizenship"</span><span class="plain">: </span><span class="str">"US Citizen"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">  </span><span class="key">"clearances"</span><span class="plain">: </span><span class="br1">[</span></div>
-        <div class="line"><span class="plain">    </span><span class="str">"Government Community Cloud (GCC)"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">    </span><span class="str">"National Security Cloud (NSC)"</span></div>
-        <div class="line"><span class="plain">  </span><span class="br1">]</span><span class="plain">,</span></div>
-        <div class="line plain"></div>
-
-        <!-- ── SKILLS ── -->
-        <div class="line cm">  // ── Skills ───────────────────────────────────────────</div>
-        <div class="line"><span class="plain">  </span><span class="key">"skills"</span><span class="plain">: </span><span class="br0">{</span></div>
-        <div class="line"><span class="plain">    </span><span class="key">"languages"</span><span class="plain">: </span><span class="br1">[</span><span class="str">"JavaScript (ES6+)"</span><span class="plain">, </span><span class="str">"jQuery"</span><span class="plain">, </span><span class="str">"React"</span><span class="plain">, </span><span class="str">"Node.js"</span><span class="plain">, </span><span class="str">"AngularJS"</span><span class="plain">, </span><span class="str">"SQL"</span><span class="plain">, </span><span class="str">"Python"</span><span class="br1">]</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">    </span><span class="key">"practices"</span><span class="plain">: </span><span class="br1">[</span><span class="str">"Agile"</span><span class="plain">, </span><span class="str">"Scrum"</span><span class="br1">]</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">    </span><span class="key">"spokenLanguages"</span><span class="plain">: </span><span class="br1">[</span></div>
-        <div class="line"><span class="plain">      </span><span class="br2">{</span><span class="plain"> </span><span class="key">"name"</span><span class="plain">: </span><span class="str">"English"</span><span class="plain">,  </span><span class="key">"proficiency"</span><span class="plain">: </span><span class="str">"native"</span><span class="plain">   </span><span class="br2">}</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">      </span><span class="br2">{</span><span class="plain"> </span><span class="key">"name"</span><span class="plain">: </span><span class="str">"中文"</span><span class="plain">,     </span><span class="key">"proficiency"</span><span class="plain">: </span><span class="str">"fluent"</span><span class="plain">   </span><span class="br2">}</span><span class="plain">,  </span><span class="cm">// Mandarin</span></div>
-        <div class="line"><span class="plain">      </span><span class="br2">{</span><span class="plain"> </span><span class="key">"name"</span><span class="plain">: </span><span class="str">"日本語"</span><span class="plain">,    </span><span class="key">"proficiency"</span><span class="plain">: </span><span class="str">"learning"</span><span class="plain"> </span><span class="br2">}</span><span class="plain">     </span><span class="cm">// Japanese</span></div>
-        <div class="line"><span class="plain">    </span><span class="br1">]</span></div>
-        <div class="line"><span class="plain">  </span><span class="br0">}</span><span class="plain">,</span></div>
-        <div class="line plain"></div>
-
-        <!-- ── EXPERIENCE ── -->
-        <div class="line cm">  // ── Experience ───────────────────────────────────────</div>
-        <div class="line"><span class="plain">  </span><span class="key">"experience"</span><span class="plain">: </span><span class="br0">[</span></div>
-
-        <!-- Senior Software Engineer · Monitoring Core & Instance Observer -->
-        <div class="line"><span class="plain">    </span><span class="br1">{</span></div>
-        <div class="line"><span class="plain">      </span><span class="key">"team"</span><span class="plain">: </span><span class="str">"Monitoring Core &amp; Instance Observer"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">      </span><span class="key">"role"</span><span class="plain">: </span><span class="str">"Senior Software Engineer"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">      </span><span class="key">"start"</span><span class="plain">: </span><span class="num">2015</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">      </span><span class="key">"end"</span><span class="plain">: </span><span class="num">2025</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">      </span><span class="key">"yoe"</span><span class="plain">: </span><span class="num">10</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">      </span><span class="key">"highlights"</span><span class="plain">: </span><span class="br2">[</span></div>
-        <div class="line"><span class="plain">        </span><span class="str">"Launched Instance Observer (IO), a customer-facing portal for instance metrics, historical analytics, alert configuration, and notifications — served 2,000+ accounts and generated $3M+ in revenue"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">        </span><span class="str">"Created 50+ data APIs with the BigData team, then built custom Highcharts visualizations tailored to customer needs"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">        </span><span class="str">"Built core notification features: SMS (Twilio), webhook integration, and in-app bell notifications"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">        </span><span class="str">"Debuted IO into the Regulated Markets (GCC and NSC), servicing 200+ accounts"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">        </span><span class="str">"Architected the IO deployment pipeline into Regulated Markets; coordinated across compliance, security, and platform teams to guarantee strict adherence to government guidelines"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">        </span><span class="str">"Led a team of 4 junior engineers across commercial and Regulated Market deployments"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">        </span><span class="str">"One of two engineers who co-developed the IO proof-of-concept; shaped the architecture and core features from the ground up; delivered in under 6 months"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">        </span><span class="str">"Designed an automated onboarding workflow for new alerts that standardized knowledge capture and coverage; enabled 200+ new alerts and still sees cross-team usage today"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">        </span><span class="str">"Reshaped the SRE alert dashboard with buckets and aggregation to improve categorization and reduce bloat during crises"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">        </span><span class="str">"Migrated the legacy SRE alerting system (data, tables, and workflows) to a newer framework with backwards compatibility and zero downtime"</span></div>
-        <div class="line"><span class="plain">      </span><span class="br2">]</span></div>
-        <div class="line"><span class="plain">    </span><span class="br1">}</span></div>
-
-        <div class="line"><span class="plain">  </span><span class="br0">]</span><span class="plain">,</span></div>
-        <div class="line plain"></div>
-
-        <!-- ── EDUCATION ── -->
-        <div class="line cm">  // ── Education ────────────────────────────────────────</div>
-        <div class="line"><span class="plain">  </span><span class="key">"education"</span><span class="plain">: </span><span class="br0">[</span></div>
-        <div class="line"><span class="plain">    </span><span class="br1">{</span></div>
-        <div class="line"><span class="plain">      </span><span class="key">"institution"</span><span class="plain">: </span><span class="str">"University of California, Irvine"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">      </span><span class="key">"degree"</span><span class="plain">: </span><span class="str">"B.S. Computer Science"</span><span class="plain">,</span></div>
-        <div class="line"><span class="plain">      </span><span class="key">"graduated"</span><span class="plain">: </span><span class="num">2016</span></div>
-        <div class="line"><span class="plain">    </span><span class="br1">}</span></div>
-        <div class="line"><span class="plain">  </span><span class="br0">]</span></div>
-        <div class="line plain"></div>
-        <div class="line"><span class="br0">}</span></div>
-        <div class="line plain"></div>
-        <div class="line cm">// EOF</div>
-        <div class="line plain"></div>
-        <div class="line plain"></div>
-
-      </div><!-- /code -->
-
-      <!-- MINIMAP -->
-      <div class="minimap">
-        <div class="minimap-viewport"></div>
-        <div class="minimap-content" id="minimap"></div>
-      </div>
-
-    </div><!-- /editor -->
-  </div><!-- /editor-wrapper -->
-</div><!-- /workspace -->
-
-<!-- STATUSBAR -->
-<div class="statusbar">
-  <span>&#9741; main</span>
-  <span>&#10003; 0 errors</span>
-  <div class="statusbar-right">
-    <span>JSON</span>
-    <span>UTF-8</span>
-    <span>Ln 1, Col 1</span>
-    <span>Spaces: 2</span>
-  </div>
-</div>
-
-<script>
-  const code = document.getElementById('code');
-  const gutter = document.getElementById('gutter');
-  const minimap = document.getElementById('minimap');
-  const lines = code.querySelectorAll('.line');
-
-  lines.forEach((_, i) => {
-    const d = document.createElement('div');
-    d.textContent = i + 1;
-    gutter.appendChild(d);
-
-    const m = document.createElement('div');
-    m.className = 'minimap-line';
-    const r = Math.random();
-    m.style.width = (30 + r * 50) + '%';
-    m.style.background = r > 0.7 ? '#569cd6' : r > 0.4 ? '#ce9178' : '#6a9955';
-    minimap.appendChild(m);
-  });
-
-  const editor = document.getElementById('editor');
-  editor.addEventListener('scroll', () => {
-    const pct = editor.scrollTop / (editor.scrollHeight - editor.clientHeight);
-    const vp = document.querySelector('.minimap-viewport');
-    const maxTop = minimap.scrollHeight - 120;
-    vp.style.top = (8 + pct * maxTop) + 'px';
-  });
-
-  document.querySelectorAll('.sidebar-item').forEach(el => {
-    el.addEventListener('click', () => {
-      document.querySelectorAll('.sidebar-item').forEach(e => e.classList.remove('active'));
-      el.classList.add('active');
-    });
-  });
-</script>
 </body>
 </html>

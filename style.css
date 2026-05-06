@@ -323,3 +323,131 @@ html, body { height: 100%; background: var(--vsc-bg); color: var(--vsc-text); }
   .activity-bar { display: none; }
   .minimap { display: none; }
 }
+
+/* ════════════════════════════════════════════════════════════════
+   DOC MODE — document-style layout that keeps JSON syntax colors
+   Activated when <body> has class "doc-mode"
+   ════════════════════════════════════════════════════════════════ */
+
+body.doc-mode {
+  background: var(--vsc-bg);
+  color: var(--vsc-text);
+  min-height: 100vh;
+  height: auto;
+}
+
+/* Reuse the titlebar but make it sticky and add a print button on the right */
+body.doc-mode .titlebar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.print-btn {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid #555;
+  color: #cccccc;
+  font: inherit;
+  font-size: 11px;
+  padding: 3px 10px 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.print-btn:hover { background: #2a2a2a; border-color: #888; color: #fff; }
+.print-btn svg { display: block; }
+
+/* Document container — centered, max-width like a single-column page */
+.doc {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 56px 56px 96px;
+}
+
+/* Document header (the "name banner" at the top) */
+.doc-header {
+  margin-bottom: 36px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #2a2a2a;
+}
+.doc-name {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  letter-spacing: -0.8px;
+  color: var(--vsc-key);
+  margin: 0;
+  line-height: 1.15;
+}
+.doc-tagline {
+  margin-top: 6px;
+  color: var(--vsc-comment);
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* Code area inside the doc — keeps the syntax colors but loses the
+   editor's fixed line height and no-wrap behavior so long lines wrap. */
+.doc-code {
+  padding: 0;
+  font-size: 13.5px;
+  line-height: 1.7;
+  overflow: visible;
+}
+.doc-code .line {
+  display: block;          /* was flex with fixed height */
+  height: auto;
+  white-space: pre-wrap;   /* allow wrapping on long lines */
+  overflow-wrap: anywhere;
+  padding: 1px 6px;
+  border-radius: 3px;
+  border-left: 2px solid transparent;
+}
+.doc-code .line:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+/* Slightly indent and color the left edge for highlight bullets,
+   so the resume bullets read like a list while still being JSON */
+.doc-code .line.bullet {
+  border-left-color: #2a3a4a;
+}
+.doc-code .line.bullet:hover {
+  border-left-color: var(--vsc-keyword);
+  background: rgba(86, 156, 214, 0.06);
+}
+/* Slightly emphasize comment-only lines (// Section) as section headers */
+.doc-code .line.cm {
+  margin-top: 12px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+.doc-code .line.cm:first-child,
+.doc-code .line.cm + .line.cm {
+  margin-top: 0;
+}
+
+/* Hide print button when actually printing */
+@media print {
+  .print-btn { display: none !important; }
+  body.doc-mode .doc {
+    max-width: none;
+    padding: 0;
+  }
+  .doc-header { border-bottom-color: #ddd; }
+  .doc-name { color: #1565c0; }
+  .doc-tagline { color: #4a7c3f; }
+  .doc-code .line.bullet { border-left-color: transparent; }
+  .doc-code .line:hover { background: transparent; }
+}
+
+/* Mobile: keep doc readable on narrow screens */
+@media (max-width: 700px) {
+  .doc { padding: 32px 20px 64px; }
+  .doc-name { font-size: 30px; }
+  .doc-code { font-size: 12.5px; }
+}
