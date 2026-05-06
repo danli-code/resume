@@ -576,14 +576,11 @@ body.prose-mode ::selection {
   }
   body.prose-mode .page {
     margin: 0;
-    padding: 0.45in 0.6in 0.55in;
+    padding: 5mm;
     background: #fff;
     box-shadow: none;
     border: none;
     max-width: none;
-  }
-  body {
-    margin: 1.6cm; /* 1.6cm = 0.63in, a common "gutter" margin for print */
   }
   .print-fab { display: none !important; }
   .r-contact a { border-bottom-color: transparent; }
