@@ -581,9 +581,12 @@ body.prose-mode ::selection {
     border: none;
     max-width: none;
   }
+  body {
+    margin: 1.6cm; /* 1.6cm = 0.63in, a common "gutter" margin for print */
+  }
   .print-fab { display: none !important; }
   .r-contact a { border-bottom-color: transparent; }
-  @page { margin: 0.5in; size: letter; }
+  @page { margin: 0; size: letter; }
 }
 
 /* ── Responsive ── */
