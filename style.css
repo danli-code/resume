@@ -192,6 +192,9 @@ body.prose-mode {
   flex-direction: column;
   gap: 1px;
 }
+.job-box {
+  font-size: 13.5px;
+}
 .job-title {
   font-size: 13.5px;
   font-weight: 600;
