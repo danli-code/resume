@@ -250,7 +250,7 @@ body.prose-mode {
 .acr,
 .yr {
   font-family: 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
-  font-size: 0.92em;
+  font-size: 12.5px;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -259,7 +259,7 @@ body.prose-mode {
 .verb { color: var(--c-verb);  }
 .acr  { color: var(--c-acr);   text-decoration: none; cursor: help; }  /* applied to <abbr> */
 .yr   { color: var(--c-muted); font-family: 'Menlo', 'JetBrains Mono', monospace; font-size: 12.5px; }
-.cm   { color: var(--c-cm); font-style: italic; font-size: 0.95em; }
+.cm   { color: var(--c-cm); font-style: italic; font-size: 13px; }
 
 
 /* ── Print ────────────────────────────────────────────────────── */
