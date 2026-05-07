@@ -118,16 +118,6 @@
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script>
-    function savePDF() {
-      html2pdf(document.querySelector('.page'), {
-        margin:     0,
-        filename:   'dan-li-resume.pdf',
-        image:      { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 3, useCORS: true },
-        jsPDF:      { unit: 'in', format: 'letter', orientation: 'portrait' }
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
