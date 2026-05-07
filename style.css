@@ -15,7 +15,7 @@
   --c-edge:   #e5e3dc;   /* subtle warm border                            */
 
   /* Text */
-  --c-strong: #000000;   /* titles / headings        (21:1 on white)      */
+  --c-strong: #1f2937;   /* titles / headings        (15.85:1 on white)   */
   --c-text:   #6b7280;   /* secondary text, captions ( 4.83:1 on white)   */
   --c-muted:  #6b7280;   /* secondary text, captions ( 4.83:1 on white)   */
 
