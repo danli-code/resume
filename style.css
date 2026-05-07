@@ -84,24 +84,24 @@ body.prose-mode {
 
 /* ── Header (name, contact, meta) ─────────────────────────────── */
 .r-head {
-  text-align: center;
+  text-align: left;
   padding-bottom: 18px;
 }
 .r-name {
-  font-size: 38px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.5px;
   color: var(--c-text);
   line-height: 1.1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .r-contact {
   margin-top: 12px;
   font-size: 13px;
   color: var(--c-muted);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .r-contact a {
@@ -120,7 +120,7 @@ body.prose-mode {
   font-size: 13px;
   color: var(--c-muted);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .r-meta .acr { margin: 0 2px; }
@@ -204,10 +204,10 @@ body.prose-mode {
   font-family: 'JetBrains Mono', 'Consolas', monospace;
   font-size: 12.5px;
   font-weight: 500;
-  color: var(--c-num);
+  color: var(--c-muted);
   white-space: nowrap;
 }
-.job-when .yr { color: inherit; }
+.job-when .yr { color: var(--c-muted); }
 
 .bullets {
   margin: 6px 0 0;
