@@ -15,7 +15,7 @@
   --c-edge:   #e5e3dc;   /* subtle warm border                            */
 
   /* Text */
-  --c-text:   #1f2937;   /* dark slate body          (15.85:1 on white)   */
+  --c-text:   #6b7280;   /* secondary text, captions ( 4.83:1 on white)   */
   --c-muted:  #6b7280;   /* secondary text, captions ( 4.83:1 on white)   */
 
   /* Resume-syntax accents (semantic role → color) */
