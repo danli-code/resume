@@ -219,7 +219,7 @@ body.prose-mode {
   line-height: 1.6;
   color: var(--c-text);
 }
-.bullets li::marker { color: var(--c-edge); }
+.bullets li::marker { color: var(--c-edge); content: "> "; }
 
 
 /* ── Education ────────────────────────────────────────────────── */
