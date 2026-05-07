@@ -248,7 +248,6 @@ body.prose-mode {
 
 
 /* ── Inline syntax tokens (consolidated in one place) ─────────── */
-.num,
 .kw,
 .verb,
 .acr,
@@ -258,7 +257,17 @@ body.prose-mode {
   font-weight: 500;
   white-space: nowrap;
 }
-.num  { color: var(--c-num);   font-family: 'Menlo', 'JetBrains Mono', 'Consolas', monospace; }
+.num {
+  color: var(--c-org);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+/* numeric tokens inside .num — wrapped by JS */
+.num-digit {
+  font-family: 'Menlo', 'JetBrains Mono', 'Consolas', monospace;
+}
 .kw   { color: var(--c-kw);    }
 .verb { color: var(--c-verb);  }
 .acr  { color: var(--c-acr);   text-decoration: none; cursor: help; }  /* applied to <abbr> */
