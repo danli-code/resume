@@ -135,12 +135,12 @@ body.prose-mode {
 .r-h2 {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   font-family: 'Menlo', 'JetBrains Mono', monospace;
   font-size: 12px;
   font-weight: 500;
   font-style: italic;
-  letter-spacing: 0.5px;
+  letter-spacing: 0px;
   text-transform: uppercase;
   color: var(--c-org);
 }
