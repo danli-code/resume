@@ -161,7 +161,7 @@ body.prose-mode {
 /* ── Skills (key/value table) ─────────────────────────────────── */
 .skills {
   display: grid;
-  grid-template-columns: 110px 1fr;
+  grid-template-columns: 130px 1fr;
   gap: 6px 20px;
   margin-top: 6px;
 }
