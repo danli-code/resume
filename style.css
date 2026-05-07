@@ -15,6 +15,7 @@
   --c-edge:   #e5e3dc;   /* subtle warm border                            */
 
   /* Text */
+  --c-strong: #000000;   /* titles / headings        (21:1 on white)      */
   --c-text:   #6b7280;   /* secondary text, captions ( 4.83:1 on white)   */
   --c-muted:  #6b7280;   /* secondary text, captions ( 4.83:1 on white)   */
 
@@ -100,7 +101,7 @@ body.prose-mode {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.5px;
-  color: var(--c-text);
+  color: var(--c-strong);
   line-height: 1.1;
   display: flex;
   justify-content: flex-start;
@@ -207,7 +208,7 @@ body.prose-mode {
 .job-title {
   font-size: 13.5px;
   font-weight: 600;
-  color: var(--c-text);
+  color: var(--c-strong);
 }
 .job-team {
   font-size: 12px;
@@ -245,7 +246,7 @@ body.prose-mode {
   font-size: 13.5px;
   margin-top: 6px;
 }
-.edu-degree { font-weight: 600; }
+.edu-degree { font-weight: 600; color: var(--c-strong); }
 .edu-school { color: var(--c-muted); }
 .edu-sep    { color: var(--c-cm); }
 .edu-year {
