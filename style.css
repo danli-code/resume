@@ -58,10 +58,11 @@ body.prose-mode {
 }
 
 
-/* ── Floating print button ────────────────────────────────────── */
-.print-fab {
+/* ── Floating buttons (print + PDF) ───────────────────────────── */
+.print-fab,
+.pdf-fab {
   position: fixed;
-  top: 18px; right: 18px;
+  right: 18px;
   width: 36px; height: 36px;
   display: inline-flex;
   align-items: center; justify-content: center;
@@ -74,11 +75,19 @@ body.prose-mode {
   transition: color 0.12s, border-color 0.12s, transform 0.12s, box-shadow 0.12s;
   z-index: 50;
 }
+.print-fab { top: 18px; }
+.pdf-fab   { top: 62px; }
 .print-fab:hover {
   color: var(--c-verb);
   border-color: var(--c-verb);
   transform: translateY(-1px);
   box-shadow: 0 2px 14px rgba(0, 0, 133, 0.18);
+}
+.pdf-fab:hover {
+  color: var(--c-org);
+  border-color: var(--c-org);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 14px rgba(42, 99, 24, 0.18);
 }
 
 
