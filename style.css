@@ -136,6 +136,7 @@ body.prose-mode {
   display: flex;
   align-items: center;
   gap: 12px;
+  font-family: 'Menlo', 'JetBrains Mono', monospace;
   font-size: 12px;
   font-weight: 500;
   font-style: italic;
