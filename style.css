@@ -198,7 +198,7 @@ body.prose-mode {
   color: var(--c-text);
 }
 .job-team {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--c-muted);
 }
 .job-when {
@@ -241,6 +241,7 @@ body.prose-mode {
   font-weight: 500;
   color: var(--c-num);
 }
+.edu-honor { font-size: 12px; color: var(--c-muted); };
 
 
 /* ── Inline syntax tokens (consolidated in one place) ─────────── */
