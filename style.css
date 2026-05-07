@@ -262,11 +262,11 @@ body.prose-mode {
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: 13.5px;
   font-weight: 500;
-  white-space: nowrap;
 }
-/* numeric tokens inside .num — wrapped by JS */
+/* numeric tokens inside .num — stay on one piece, Menlo font */
 .num-digit {
   font-family: 'Menlo', 'JetBrains Mono', 'Consolas', monospace;
+  white-space: nowrap;
 }
 .kw   { color: var(--c-kw);    }
 .verb { color: var(--c-verb);  }
