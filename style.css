@@ -307,15 +307,64 @@ body.prose-mode {
 
 
 /* ── Responsive ───────────────────────────────────────────────── */
+
+/* Tablet / large phone */
 @media (max-width: 700px) {
-  body.prose-mode { padding: 16px 8px 48px; }
+  body.prose-mode { padding: 12px 8px 48px; }
   .page {
-    padding: 32px 22px 48px;
+    padding: 28px 20px 40px;
     box-shadow: none;
+    border: none;
   }
-  .r-name { font-size: 30px; }
-  .skills { grid-template-columns: 90px 1fr; gap: 4px 12px; }
+
+  /* FABs: tuck closer to corner and shrink slightly */
+  .print-fab, .pdf-fab {
+    width: 32px; height: 32px;
+    top: auto;
+    right: 10px;
+  }
+  .print-fab { bottom: 56px; }
+  .pdf-fab   { bottom: 16px; }
+
+  /* Contact: allow wrapping, reduce gap */
+  .r-contact { gap: 2px 0; }
+  .r-contact .dot-sep { margin: 0 5px; }
+
+  /* Skills: narrower label column */
+  .skills { grid-template-columns: 100px 1fr; gap: 5px 12px; }
+
+  /* Job: stack date below title */
   .job-head { flex-direction: column; align-items: flex-start; gap: 2px; }
+
+  /* Bullets: tighter indent */
+  .bullets { padding-left: 16px; }
+
+  /* Education: stack year below degree line */
   .edu { flex-direction: column; align-items: flex-start; gap: 4px; }
-  .print-fab { top: 10px; right: 10px; }
+}
+
+/* Small phone */
+@media (max-width: 400px) {
+  body.prose-mode { padding: 8px 4px 48px; }
+  .page { padding: 20px 14px 32px; }
+
+  /* Contact: stack each item on its own line, hide separators */
+  .r-contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+  .r-contact .dot-sep { display: none; }
+
+  /* Skills: collapse to single column */
+  .skills {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .skills dt {
+    margin-top: 8px;
+  }
+
+  /* Slightly smaller base font */
+  .bullets li, .skills dd { font-size: 12.5px; }
 }
