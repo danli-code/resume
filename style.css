@@ -59,11 +59,10 @@ body.prose-mode {
 }
 
 
-/* ── Floating buttons (print + PDF) ───────────────────────────── */
-.print-fab,
-.pdf-fab {
+/* ── Floating print button ────────────────────────────────────── */
+.print-fab {
   position: fixed;
-  right: 18px;
+  top: 18px; right: 18px;
   width: 36px; height: 36px;
   display: inline-flex;
   align-items: center; justify-content: center;
@@ -76,19 +75,11 @@ body.prose-mode {
   transition: color 0.12s, border-color 0.12s, transform 0.12s, box-shadow 0.12s;
   z-index: 50;
 }
-.print-fab { top: 18px; }
-.pdf-fab   { top: 62px; }
 .print-fab:hover {
   color: var(--c-verb);
   border-color: var(--c-verb);
   transform: translateY(-1px);
   box-shadow: 0 2px 14px rgba(0, 0, 133, 0.18);
-}
-.pdf-fab:hover {
-  color: var(--c-org);
-  border-color: var(--c-org);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 14px rgba(42, 99, 24, 0.18);
 }
 
 
@@ -317,14 +308,11 @@ body.prose-mode {
     border: none;
   }
 
-  /* FABs: tuck closer to corner and shrink slightly */
-  .print-fab, .pdf-fab {
+  /* FAB: tuck closer to corner and shrink slightly */
+  .print-fab {
     width: 32px; height: 32px;
-    top: auto;
-    right: 10px;
+    top: 10px; right: 10px;
   }
-  .print-fab { bottom: 56px; }
-  .pdf-fab   { bottom: 16px; }
 
   /* Contact: allow wrapping, reduce gap */
   .r-contact { gap: 2px 0; }
